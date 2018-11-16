@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Welcome to the {{ title }}!!!</h1>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <ul class="list-group">
+          <li *ngFor="let item of items" class="list-group-item">{{ item }}</li>
+        </ul>
+      </div>
+      <div class="col-xs-6">
+          <div class="form-group">
+            <label for="item">Name of Item</label>
+            <input type="input" [(ngModel)]="itemToSave" class="form-control" id="item">
+          </div>
+          <button type="button" (click)="onSave()" class="btn btn-default">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
